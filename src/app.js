@@ -8,7 +8,7 @@ const { checkIsValidUserInput } = require('./modules/checkIsValidUserInput');
 const { getBullsAndCows } = require('./modules/getBullsAndCows');
 
 const PROMPT_MESSAGE = 'Write 4 digits: \n';
-const INVALID_INPUT_MESSAGE = 'The input must be 4 digits: \n';
+const INVALID_INPUT_MESSAGE = 'The input must be 4 uniq digits: \n';
 const TRY_AGAIN_MESSAGE = 'Need to try one more time: \n';
 const WIN_MESSAGE = 'You win! The correct answer is';
 
