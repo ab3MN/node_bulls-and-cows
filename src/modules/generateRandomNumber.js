@@ -8,15 +8,19 @@
  */
 
 function generateRandomNumber() {
-  const uniqRandomNumbers = new Set();
+  const digits = new Set();
 
-  while (uniqRandomNumbers.size !== 4) {
-    const randomNumber = Math.floor(1 + Math.random() * 9);
+  const firstDigit = Math.floor(1 + Math.random() * 9);
 
-    uniqRandomNumbers.add(randomNumber);
+  digits.add(firstDigit);
+
+  while (digits.size < 4) {
+    const randomDigit = Math.floor(Math.random() * 10);
+
+    digits.add(randomDigit);
   }
 
-  return Number(Array.from(uniqRandomNumbers).join(''));
+  return Number(Array.from(digits).join(''));
 }
 
 module.exports = {

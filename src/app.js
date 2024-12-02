@@ -19,7 +19,7 @@ stdout.write(PROMPT_MESSAGE);
 
 input.on('line', (text) => {
   if (!checkIsValidUserInput(text)) {
-    stdout.write(INVALID_INPUT_MESSAGE);
+    stdout.write(INVALID_INPUT_MESSAGE + PROMPT_MESSAGE);
   }
 
   const { bulls, cows } = getBullsAndCows(text, answer);
